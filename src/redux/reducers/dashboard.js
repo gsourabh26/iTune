@@ -39,11 +39,16 @@ export default (state={}, action={}) =>{
             }
         }  
         case types.APPLY_FILTER: {
-            var filter = action.payload;
-            var itunes = state.fetchedItunes;
-            var filterItunes = itunes.filter(tune=>{
-                for(var key in filter){
-                    var filterValue = filter[key];
+            let oldFilter = state.filterApplied || {};
+            let filter = action.payload;
+            let filterToApply = {
+                ...oldFilter,
+                ...filter
+            }
+            let itunes = state.fetchedItunes;
+            let filterItunes = itunes.filter(tune=>{
+                for(let key in filterToApply){
+                    let filterValue = filterToApply[key];
                       if(key === "trackPrice" && filterValue.from !== undefined && filterValue.to !== undefined && (tune[key] < filterValue.from || tune[key] > filterValue.to)){
                           return false
                       }
@@ -55,6 +60,7 @@ export default (state={}, action={}) =>{
             })
             return {
                 ...state,
+                filterApplied: filterToApply,
                 itunes: filterItunes
             }
         }

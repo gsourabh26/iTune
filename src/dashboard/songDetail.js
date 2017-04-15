@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import ReactAudioPlayer from "react-audio-player";
+import ReactAudioPlayer from "react-audio-player";  
 
 class ITune extends React.Component {
     render(){
