@@ -1,0 +1,91 @@
+.body{
+    display: table;
+    margin: 0 auto;
+}
+#header{
+    display: flex;
+    justify-content:space-between;
+    width: 950px;
+}
+#ituneList{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+}
+#itune{
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    margin: 1px;
+    border: 1px solid lightgrey;
+}
+#ituneRow1,#ituneRow2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#searchbar{
+    width: 950px;
+}
+#filterView{
+    width: 250px;
+}
+#filterContainer{
+    border: 1px solid lightgrey
+}
+#filterType{
+    font-weight: bold;
+    border-bottom:   1px solid lightgrey;
+}
+#filterValue{
+    padding: 5px 0px; 
+}
+#checkbox{
+    border: 1px solid lightgrey;
+    width: 8px;
+    height: 8px;
+    margin: 5px;
+}
+#selectedCheckbox{
+    border: 1px solid blue;
+    width: 8px;
+    height: 8px;
+    margin: 5px;
+    background-color: deepskyblue;
+}
+#historyContainer{
+    background-color: rgba(14, 3, 3, 0.4);
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+}
+#historyView{
+    display: flex;
+    width: 500px; 
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#heading{
+    align-self: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.historyLog{
+    border: 1px dashed gray;
+    padding: 3px 0px 3px 3px;
+    width: 100%;
+}
+#login{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 26px;
+    font-weight: bolder;
+    color: blue;
+    padding: 15px;
+    text-align: center;
+}
